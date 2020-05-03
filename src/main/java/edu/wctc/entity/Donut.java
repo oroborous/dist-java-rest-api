@@ -1,5 +1,6 @@
 package edu.wctc.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import edu.wctc.DateUtils;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +19,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity
 @Table(name = "donut")
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Donut {
 
     @Id

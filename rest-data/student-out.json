@@ -1,0 +1,15 @@
+{
+  "id" : 101,
+  "firstName" : "Stacy",
+  "lastName" : "Read",
+  "email" : "sread@wctc.edu",
+  "gpa" : 4.0,
+  "address" : {
+    "street" : "800 Main St.",
+    "city" : "Pewaukee",
+    "state" : "WI",
+    "zip" : "53072"
+  },
+  "dateEnrolled" : [ 2018, 9, 1 ],
+  "languages" : null
+}

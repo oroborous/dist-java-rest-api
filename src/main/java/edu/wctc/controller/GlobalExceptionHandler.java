@@ -1,4 +1,4 @@
-package edu.wctc;
+package edu.wctc.controller;
 
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.ui.Model;
@@ -10,7 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
-@ControllerAdvice
+/**
+ * Turned off for testing REST API
+ */
+// @ControllerAdvice
 public class GlobalExceptionHandler {
     @ExceptionHandler({Exception.class})
     @ResponseStatus(value = INTERNAL_SERVER_ERROR)

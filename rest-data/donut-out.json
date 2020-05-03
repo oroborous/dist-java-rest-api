@@ -1,0 +1,21 @@
+{
+  "id" : 300,
+  "shop" : {
+    "id" : 400,
+    "name" : "State Fair Donuts",
+    "detail" : {
+      "id" : 123,
+      "yearFounded" : 2019,
+      "hometown" : "West Allis, WI",
+      "shop" : null
+    },
+    "donuts" : [ ],
+    "cities" : [ ]
+  },
+  "reviews" : [ ],
+  "name" : "Deep Fried Eclair on a Stick",
+  "calories" : 799,
+  "imageId" : 1,
+  "dateAdded" : [ 2020, 5, 2 ],
+  "formattedDate" : "May 2, 2020"
+}

@@ -75,10 +75,19 @@
     <!-- END HIBERNATE CONFIGURATION -->
 
     <!-- Support for component scanning -->
-    <context:component-scan base-package="edu.wctc.dao, edu.wctc.controller, edu.wctc.service"/>
+    <context:component-scan base-package="edu.wctc.dao,edu.wctc.controller, edu.wctc.service, edu.wctc.rest"/>
 
     <!-- Support for conversion, formatting, and validation -->
-    <mvc:annotation-driven conversion-service="myConversionService"/>
+    <mvc:annotation-driven conversion-service="myConversionService">
+        <!-- Use our Hibernate-aware object mapper for JSON with Jackson -->
+        <mvc:message-converters>
+            <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter">
+                <property name="objectMapper">
+                    <bean class="edu.wctc.rest.HibernateAwareObjectMapper"/>
+                </property>
+            </bean>
+        </mvc:message-converters>
+    </mvc:annotation-driven>
 
     <!-- Configure Spring MVC view resolver -->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">

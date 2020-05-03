@@ -1,5 +1,6 @@
 package edu.wctc.entity;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -24,6 +25,7 @@ public class DonutShop {
 
     @OneToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "detail_id")
+    @JsonManagedReference
     private DonutShopDetail detail;
 
     @OneToMany(mappedBy = "shop",

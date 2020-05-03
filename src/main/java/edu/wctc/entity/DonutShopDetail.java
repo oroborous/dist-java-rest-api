@@ -1,5 +1,6 @@
 package edu.wctc.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.*;
 
 import javax.persistence.*;
@@ -27,6 +28,7 @@ public class DonutShopDetail {
 
     @OneToOne(mappedBy = "detail",
             cascade = {CascadeType.DETACH, CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH})
+    @JsonBackReference
     private DonutShop shop;
 
     public DonutShopDetail(int yearFounded, String hometown) {
